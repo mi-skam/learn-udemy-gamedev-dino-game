@@ -1,0 +1,47 @@
+{
+  "name": "learn-udemy-gamedev-dino-game",
+  "version": "0.0.3",
+  "private": true,
+  "bugs": {
+    "url": "https://github.com/new-objects/learn-udemy-gamedev-dino-game/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/new-objects/learn-udemy-gamedev-dino-game"
+  },
+  "type": "module",
+  "scripts": {
+    "build": "tsc && vite build",
+    "build:gh-pages": "cross-env DEPLOY_ENV=gh-pages vite build",
+    "dev": "node vite-dev.js",
+    "dev:host": "vite --host",
+    "format": "npm run prettier:fix && npm run lint:fix",
+    "gh-deploy": "npm run build:gh-pages && gh-pages -d dist",
+    "lint": "npx eslint src",
+    "lint:fix": "npm run lint -- --fix",
+    "prettier": "npx prettier src --check",
+    "prettier:fix": "npm run prettier -- --write",
+    "preview": "npm run build && vite preview"
+  },
+  "dependencies": {
+    "phaser": "^3.80.1"
+  },
+  "devDependencies": {
+    "@new-objects/prettier-config": "^0.0.2",
+    "@typescript-eslint/eslint-plugin": "^7.6.0",
+    "@typescript-eslint/parser": "^7.5.0",
+    "autoprefixer": "^10.4.19",
+    "colors": "^1.4.0",
+    "cross-env": "^7.0.3",
+    "eslint": "^8.57.0",
+    "gh-pages": "^6.1.1",
+    "husky": "^8.0.0",
+    "postcss": "^8.4.38",
+    "qrcode": "^1.5.3",
+    "tailwindcss": "^3.4.3",
+    "tunnelmole": "^2.2.14",
+    "typescript": "^5.4.4",
+    "vite": "^5.2.8",
+    "vite-plugin-eslint": "^1.8.1"
+  }
+}
