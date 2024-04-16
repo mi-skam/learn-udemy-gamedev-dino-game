@@ -1,14 +1,21 @@
-import '../css/style.css';
+// import from '../css/style.css';
 
-import Phaser from 'phaser';
-import Game from './scenes/Game';
+import Phaser from "phaser";
+import Preloader from "./scenes/Preloader.ts";
+import Game from "./scenes/Game.ts";
 
 export default new Phaser.Game({
   type: Phaser.AUTO,
-  width: 800,
-  height: 600,
+  width: 1000,
+  height: 340,
+  pixelArt: true,
+  transparent: true,
   physics: {
-    default: 'arcade',
+    default: "arcade",
+    arcade: {
+      debug: false,
+    },
   },
-  scene: Game,
+  parent: "game",
+  scene: [Preloader, Game],
 });
